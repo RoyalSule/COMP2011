@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ product.title }}</h1>
+<div class="product-details">
+    <img src="/static/images/{{ product.image_url }}" alt="">
+    <p>Price: £{{ product.price }}</p>
+    <p>Description: {{ product.description }}</p>
+</div>
+<button class="add-to-cart-button btn btn-primary" data-product-id="{{ product.id }}">
+    Add to Cart
+</button>
+<p id="cart-message" class="text-success"></p>
+{% endblock %}
